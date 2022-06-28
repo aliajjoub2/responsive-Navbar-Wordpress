@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/navbarwordpress.css">
+    
+    <title></title>
+</head>
+<body>
+    
+<div class="menu-menu-1-container">
+    <ul id="menu-menu-1" class="menu">
+        <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-41">
+            <a href="https://news.syrian-economy.de/" aria-current="page">المعتقل السوري</a>
+        </li>
+        <li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67">
+            <a href="https://news.syrian-economy.de/index.php/%d8%a7%d9%84%d9%85%d8%b9%d8%aa%d9%82%d9%84%d9%8a%d9%86-%d8%a7%d9%84%d8%ad%d8%a7%d9%84%d9%8a%d9%8a%d9%86/">المعتقلين الحاليين</a>
+        </li>
+        <li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66">
+            <a href="https://news.syrian-economy.de/index.php/%d8%a7%d9%84%d9%85%d8%b9%d8%aa%d9%82%d9%84%d9%8a%d9%86-%d8%a8%d8%b9%d8%af-%d8%a7%d9%84%d8%ab%d9%88%d8%b1%d8%a9/">المعتقلين بعد الثورة</a>
+        </li>
+        <li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65">
+            <a href="https://news.syrian-economy.de/index.php/%d9%85%d8%a7%d8%a8%d9%8a%d9%86-2000-%d9%88-2011/">مابين 2000 و 2011</a>
+        </li>
+        <li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-64">
+            <a href="https://news.syrian-economy.de/index.php/%d9%85%d8%a7%d8%a8%d9%8a%d9%86-1990-%d9%88-2000/">مابين 1990 و 2000</a>
+            <ul class="sub-menu">
+                <li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63">
+                    <a href="https://news.syrian-economy.de/index.php/%d9%85%d8%a7%d8%a8%d9%8a%d9%86-1980-%d9%88-1990/">مابين 1980 و 1990</a>
+                </li>
+                <li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61">
+                    <a href="https://news.syrian-economy.de/index.php/%d9%85%d8%a7%d9%82%d8%a8%d9%84-1970/">ماقبل 1970</a>
+                </li>
+                <li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62">
+                    <a href="https://news.syrian-economy.de/index.php/%d9%85%d8%a7%d8%a8%d9%8a%d9%86-1970-%d9%881980/">مابين 1970 و1980</a>
+                </li>
+            </ul>
+        </li>
+        <!-- start probe has-childern --> 
+        <li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6">
+            <a href="https://news.syrian-economy.de/index.php/%d9%85%d8%a7%d8%a8%d9%8a%d9%86-1990-%d9%88-2000/">تجربة أولى </a>
+            <ul class="sub-menu">
+                <li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63">
+                    <a href="https://news.syrian-economy.de/index.php/%d9%85%d8%a7%d8%a8%d9%8a%d9%86-1980-%d9%88-1990/"> أول  </a>
+                </li>
+                <li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61">
+                    <a href="https://news.syrian-economy.de/index.php/%d9%85%d8%a7%d9%82%d8%a8%d9%84-1970/">ثاني </a>
+                </li>
+                <li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62">
+                    <a href="https://news.syrian-economy.de/index.php/%d9%85%d8%a7%d8%a8%d9%8a%d9%86-1970-%d9%881980/"> ثالث </a>
+                </li>
+            </ul>
+        </li>
+        <!-- start probe has-childern --> 
+        <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
+            <a href="https://news.syrian-economy.de/index.php/about-us/">حول</a>
+        </li>
+    </ul>
+</div>
+
+<script>
+
+// document.querySelector('div').insertAdjacentHTML('afterBegin','<p>Second paragraph in the code, but should become first.</p>')
+
+    // count tag hwho has ClassName menu-item-has-children
+    clannNameNumber= document.getElementsByClassName('menu-item-has-children').length;
+    for (let i = 0; i < clannNameNumber; i++) {
+        // add i to ClassName menu-item-has-children
+        document.getElementsByClassName("menu-item-has-children")[i].innerHTML += "<i>&#xfe40;</i>";        
+    }
+
+   
+    let menu= document.getElementsByClassName("menu")[0];
+    
+    
+
+    menu.innerHTML += "<i id='menuSympol'>&#9776;</i>";
+    menu.innerHTML += "<h2 id='MobileHome'>الموقع</h2>";
+    menu.innerHTML += "<i id ='closeBtn'>X</i>";
+
+    let menuSympol = document.getElementById("menuSympol");
+    let MobileHome= document.getElementById('MobileHome'); 
+    let closeBtn= document.getElementById('closeBtn');
+
+    
+
+    let menuItem= document.getElementsByClassName('menu-item-type-post_type').length;
+   
+    
+
+    menuSympol.onclick= function(){
+        menu.style.display = "block";
+        menuSympol.style.display="none";
+        MobileHome.style.display="none";
+        closeBtn.style.display="block";
+        for (let i = 0; i < menuItem; i++) {
+        // add i to ClassName menu-item-has-children
+        document.getElementsByClassName('menu-item-type-post_type')[i].style.display="block";
+             
+    }
+
+
+    }
+</script>
+<script src="js/navbarwordpress.js"></script>
+</body>
+</html>

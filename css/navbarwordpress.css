@@ -1,0 +1,186 @@
+ /* Googlefont Poppins CDN Link */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+ body{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+   transition: 0.5s;
+  
+ }
+ *{
+    transition: 0.5s;
+ }
+:root {
+    --pramary: #f94f2f;
+    --secondary: green;
+    --third: white;
+  }
+
+.menu a{
+    text-decoration: none;
+    color: var(--third);
+
+}
+.menu ul{
+list-style-type: none;
+}
+ .menu{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+   max-width: 1500px;
+   width: 100%;
+   
+   margin: auto;
+   /* background: red; */
+   padding: 0 50px;
+  
+   background: var(--pramary);
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+   height: 70px;
+   
+
+}
+
+ .menu   .menu-item-type-post_type, .current-menu-item{
+    padding: 5px 30px;
+    color: var(--third);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+
+}
+.menu .menu-item-has-children{
+    position: relative;
+      display: inline-block;
+      display: flex;
+    align-items: center;
+    }
+    .menu > i{
+        display: none;
+    }
+    #closeBtn{
+        
+    }
+@media(max-width: 800px) {
+  
+  
+    .menu > i{
+        display: block;
+        
+    }
+    .menu h2{
+        margin: 0px 50px;
+    }
+    .menu #closeBtn{
+        
+        top: 0 px;
+        left: 0px;
+        margin: 10px;
+    }
+    .menu{
+       
+       
+    width: auto;
+    height: auto;
+    left: 0px;
+    justify-content: space-between;
+    padding: 10px 20px;
+    direction: rtl;
+    /* right: 0px; */
+    margin-right: 0px;
+    
+    }
+    .menu   .menu-item-type-post_type, .current-menu-item{
+        padding: 5px 10px;
+       
+        margin: 5px 43px;
+        display: none;
+        
+    
+    }
+    .menu .menu-item-has-children{
+        position: relative;
+          
+          display: none;
+        
+        }
+
+}
+ .menu  > .menu-item-type-post_type:hover, .current-menu-item:hover{
+    background-color: var(--secondary);
+}
+ 
+ .menu  .menu-item-has-children .sub-menu{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 0px;
+    top: 70px;
+    right: 0px;
+
+}
+ .menu  .menu-item-has-children .sub-menu li{
+    color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  direction: rtl;
+    
+}
+.menu  .menu-item-has-children .sub-menu li  a{
+    display: flex;
+    flex-direction: row;
+}
+ .menu  .menu-item-has-children .sub-menu li a{
+    color: var(--pramary);
+}
+ .menu  .menu-item-has-children .sub-menu li:hover{
+    background-color: var(--secondary);
+    
+}
+
+ .menu  .menu-item-has-children .sub-menu li:hover a{
+    color: var(--third);
+}
+
+ .menu .menu-item-has-children:hover .sub-menu {
+    display: block;
+}
+ .menu .menu-item .menu-item-type-post_type .sub-menu .menu-item{
+    z-index: 1;
+    
+}
+ .menu  .menu-item-type-post_type .sub-menu:hover{
+    display: block;
+
+}
+
+
+.articleclass .bypostauthor {
+    position: relative;
+    
+}
+.articleclass .bypostauthor::after{
+    content: 'كاتب المقال';
+    top: 10px;
+    right: 10px;
+    color: aquamarine;
+    position: absolute;
+    background-color: #f9f9f9;
+
+}
+.menu .menu-item-has-children i{
+    margin-left: 7px;
+}
+.menu  .menu-item-has-children:hover i{
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
