@@ -1,54 +1,41 @@
-/*  // add i after mainmenu
- function addElement () {
-    // create a new div element
-    const newDiv = document.createElement("span");
-  
-    // and give it some content
-    const newContent = document.createTextNode("here new");
-  
-    // add the text node to the newly created div
-    newDiv.appendChild(newContent);
-  
-    // add the newly created element and its content into the DOM
-    const currentDiv = document.getElementById("menu-item-64");
-    document.body.insertBefore(newDiv, currentDiv);
-  }
-  addElement (); */
+// document.querySelector('div').insertAdjacentHTML('afterBegin','<p>Second paragraph in the code, but should become first.</p>')
 
-/*   var tag = document.createElement("p");
-   var text = document.createTextNode("Tutorix is the best e-learning platform");
-   tag.appendChild(text);
-   var element = document.getElementById("menu-item-64");
-   element.appendChild(tag); */
+    // count tag hwho has ClassName menu-item-has-children
+    clannNameNumber= document.getElementsByClassName('menu-item-has-children').length;
+    for (let i = 0; i < clannNameNumber; i++) {
+        // add i to ClassName menu-item-has-children
+        document.getElementsByClassName("menu-item-has-children")[i].innerHTML += "<i>&#xfe40;</i>";        
+    }
 
-/* 
- // sidebar open close js code
- let navLinks = document.querySelector(".nav-links");
- let menuOpenBtn = document.querySelector(".navbar .bx-menu");
- let menuCloseBtn = document.querySelector(".nav-links .bx-x");
- menuOpenBtn.onclick = function() {
- navLinks.style.left = "0";
- }
- menuCloseBtn.onclick = function() {
- navLinks.style.left = "-100%";
- }
+   
+    let menu= document.getElementsByClassName("menu")[0];
+    
+    
+
+    menu.innerHTML += "<i id='menuSympol'>&#9776;</i>";
+    menu.innerHTML += "<h2 id='MobileHome'>الموقع</h2>";
+    menu.innerHTML += "<i id ='closeBtn'>X</i>";
+
+    let menuSympol = document.getElementById("menuSympol");
+    let MobileHome= document.getElementById('MobileHome'); 
+    let closeBtn= document.getElementById('closeBtn');
+
+    
+
+    let menuItem= document.getElementsByClassName('menu-item-type-post_type').length;
+   
+    
+
+    menuSympol.onclick= function(){
+        menu.style.display = "block";
+        menuSympol.style.display="none";
+        MobileHome.style.display="none";
+        closeBtn.style.display="block";
+        for (let i = 0; i < menuItem; i++) {
+        // add i to ClassName menu-item-has-children
+        document.getElementsByClassName('menu-item-type-post_type')[i].style.display="block";
+             
+    }
 
 
- // sidebar submenu open close js code
- let htmlcssArrow = document.querySelector(".OurServiice");
- htmlcssArrow.onclick = function() {
- navLinks.classList.toggle("show3");
- }
- let moreArrow = document.querySelector(".more-arrow");
- moreArrow.onclick = function() {
- navLinks.classList.toggle("show2");
- }
- let jsArrow = document.querySelector(".euroNavbar");
- jsArrow.onclick = function() {
- navLinks.classList.toggle("show1");
- }
- let langArrow = document.querySelector(".langMobil");
- langArrow.onclick = function() {
- navLinks.classList.toggle("show4");
- } */
-
+    }
