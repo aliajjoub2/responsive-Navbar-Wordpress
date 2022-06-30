@@ -10,6 +10,7 @@
  }
  *{
     transition: 0.5s;
+    overflow: hidden;
  }
 :root {
     --pramary: #f94f2f;
@@ -26,6 +27,7 @@
 list-style-type: none;
 }
  .menu{
+    position: absolute;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -54,6 +56,14 @@ list-style-type: none;
     
 
 }
+.menu h2{
+    display: none;
+}
+#closeBtn{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+}
 .menu .menu-item-has-children{
     position: relative;
       display: inline-block;
@@ -62,19 +72,16 @@ list-style-type: none;
     }
     .menu > i{
         display: none;
+        cursor: pointer;
     }
-    #closeBtn{
-        
-    }
+/* start Query */ 
 @media(max-width: 800px) {
   
-  
-    .menu > i{
-        display: block;
-        
-    }
+   
+   
     .menu h2{
         margin: 0px 50px;
+        display: flex;
     }
     .menu #closeBtn{
         
@@ -84,33 +91,40 @@ list-style-type: none;
     }
     .menu{
        
-       
-    width: auto;
-    height: auto;
-    left: 0px;
-    justify-content: space-between;
-    padding: 10px 20px;
-    direction: rtl;
-    /* right: 0px; */
-    margin-right: 0px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        display: block;
+        max-width: 270px;
+        width: 100%;
+        background: #3E8DA8;
+        line-height: 40px;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+        transition: all 0.5s ease;
+        z-index: 1000;
+        overflow: hidden;
+        height: auto;
     
     }
     .menu   .menu-item-type-post_type, .current-menu-item{
         padding: 5px 10px;
        
         margin: 5px 43px;
-        display: none;
+        
         
     
     }
     .menu .menu-item-has-children{
         position: relative;
           
-          display: none;
+          
         
         }
 
 }
+
+/* end Query */
  .menu  > .menu-item-type-post_type:hover, .current-menu-item:hover{
     background-color: var(--secondary);
 }
