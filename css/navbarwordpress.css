@@ -10,7 +10,7 @@
  }
  *{
     transition: 0.5s;
-    overflow: hidden;
+    
  }
 :root {
     --pramary: #f94f2f;
@@ -38,7 +38,7 @@ list-style-type: none;
    
    margin: auto;
    /* background: red; */
-   padding: 0 50px;
+   
   
    background: var(--pramary);
    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -63,6 +63,16 @@ list-style-type: none;
     display: none;
     position: absolute;
     cursor: pointer;
+    left: 10px;
+    padding: 10px;
+    background-color: red;
+}
+#menuSympol{
+    margin: 10px;
+    cursor: pointer;
+}
+#MobileHome{
+    margin: 10px;
 }
 .menu .menu-item-has-children{
     position: relative;
@@ -74,57 +84,27 @@ list-style-type: none;
         display: none;
         cursor: pointer;
     }
-/* start Query */ 
-@media(max-width: 800px) {
-  
-   
-   
-    .menu h2{
-        margin: 0px 50px;
-        display: flex;
-    }
-    .menu #closeBtn{
-        
-        top: 0 px;
-        left: 0px;
-        margin: 10px;
-    }
-    .menu{
-       
-        position: fixed;
-        top: 0;
-        right: -100%;
-        display: block;
-        max-width: 270px;
-        width: 100%;
-        background: #3E8DA8;
-        line-height: 40px;
-        padding: 20px;
-        box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
-        transition: all 0.5s ease;
-        z-index: 1000;
-        overflow: hidden;
-        height: auto;
-    
-    }
-    .menu   .menu-item-type-post_type, .current-menu-item{
-        padding: 5px 10px;
-       
-        margin: 5px 43px;
-        
-        
-    
-    }
-    .menu .menu-item-has-children{
-        position: relative;
-          
-          
-        
-        }
 
-}
+    .menu .menu-item-has-children i{
+        margin-left: 7px;
+    }
+    .menu  .menu-item-has-children:hover i{
+        transform: rotate(180deg);
+        transition: 0.3s;
+    }
 
-/* end Query */
+    .menu  .menu-item-has-children .sub-menu li{
+        color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      direction: rtl;
+        
+    }
+
+
+
+
  .menu  > .menu-item-type-post_type:hover, .current-menu-item:hover{
     background-color: var(--secondary);
 }
@@ -141,14 +121,7 @@ list-style-type: none;
     right: 0px;
 
 }
- .menu  .menu-item-has-children .sub-menu li{
-    color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  direction: rtl;
-    
-}
+
 .menu  .menu-item-has-children .sub-menu li  a{
     display: flex;
     flex-direction: row;
@@ -191,10 +164,85 @@ list-style-type: none;
     background-color: #f9f9f9;
 
 }
-.menu .menu-item-has-children i{
-    margin-left: 7px;
-}
-.menu  .menu-item-has-children:hover i{
-    transform: rotate(180deg);
-    transition: 0.3s;
-}
+
+
+/* start Query */ 
+@media(max-width: 1025px) {
+  
+    .ClassContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: red;
+        height: 28px;
+       }
+    
+     .menu h2{
+         margin: 0px 50px;
+         display: flex;
+     }
+     .menu #closeBtn{
+         
+         top: 0 px;
+         left: 0px;
+         margin: 10px;
+     }
+     .menu{
+        
+         position: fixed;
+         top: 0;
+         right: -100%;
+         display: block;
+         max-width: 270px;
+         width: 250px;
+         background: #3E8DA8;
+         line-height: 40px;
+         
+         box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+         transition: all 0.5s ease;
+         z-index: 1000;
+         
+         height: auto;
+     
+     }
+     .menu   .menu-item-type-post_type, .current-menu-item{
+         padding: 5px 10px;
+        
+         margin: 5px 43px;
+         display: flex;
+         flex-direction: row-reverse;
+         
+         
+     
+     }
+     .menu .menu-item-has-children{
+         position: relative;
+           
+           
+         
+         }
+ 
+     .menu .menu-item-has-children i{
+         margin-right: 20px;
+         padding-right: 6px;
+         cursor: pointer;
+         position: absolute;
+         left: -62px;
+     }
+     .menu  .menu-item-has-children .sub-menu li{
+        
+     padding: 0px 0px;
+     
+     display: flex;
+     
+     margin: 5px;
+     flex-direction: row;
+     
+     border-bottom: 1px solid #f19999;
+     
+         
+     }
+ 
+ } /* end Query */
+ 
