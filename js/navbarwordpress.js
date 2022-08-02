@@ -1,4 +1,4 @@
-
+// start Navbar
 // define how many elemnet have class name 'menu-item-has-children'
 clannNameNumber = document.getElementsByClassName("menu-item-has-children").length;
 // add i down  to every  ClassName menu-item-has-children
@@ -39,6 +39,7 @@ function myFunction(x) {
         MenuIDTag.style.display = "none";
         
     } else { 
+        MenuIDTag.style.top = "0";
         MenuIDTag.style.right = "0";
         MenuIDTag.style.width = "100%";
         MenuIDTag.style.display = "flex";
@@ -58,9 +59,12 @@ function myFunction(x) {
   MobileHome.style.display = "none"; 
 
   closeBtn.style.display = "block";
+  closeBtn.style.zIndex = "5";
 
 };
 
 // add class ClassContainer to main Div of the menu
 var element = document.getElementsByClassName(divClass)[0];
 element.classList.add("ClassContainer");
+
+// end Navbar
